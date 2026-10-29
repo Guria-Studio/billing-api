@@ -27,4 +27,6 @@ jobs:
       - name: Install dependencies
         run: pip install -e .[dev]
       - name: Run tests
-        run: pytest
+        # GIF demo workaround for hectorcanaimero/orch#500: a scaffold task
+        # has no tests yet, and pytest exits 5 when it collects none.
+        run: pytest || [ $? -eq 5 ]
