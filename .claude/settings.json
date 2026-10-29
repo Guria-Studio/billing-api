@@ -3,7 +3,11 @@
     "allow": [
       "mcp__orch",
       "Bash(scripts/task-finish.sh:*)",
-      "Bash(scripts/task-block.sh:*)"
+      "Bash(scripts/task-block.sh:*)",
+      "Bash(python3 -m venv:*)",
+      "Bash(.venv/bin/pip:*)",
+      "Bash(.venv/bin/pytest:*)",
+      "Bash(.venv/bin/python:*)"
     ]
   }
 }
